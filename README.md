@@ -47,7 +47,7 @@ dataset = version.download("yolov8-obb")
 # Train the model
 ```
 %cd {HOME}
-!yolo task=detect mode=train model=yolov8s.pt data=/content/datasetDrone-29/data.yaml epochs=25 imgsz=640
+!yolo task=detect mode=train model=yolov8s.pt data={dataset.location}/data.yaml epochs=25 imgsz=640
 ```
 
 # Evaluate the model
