@@ -1,9 +1,22 @@
-# Drone Detection Research
+# Drone Object Detection Research
 This README file outlines the steps and details for training a YOLOv8 model on Colab using a drone detection dataset sourced from Roboflow.
 
-# Dataset
-Drone Detection Dataset:
+# Drone Detection Dataset
+
+To support the development and evaluation of drone detection models, we present a comprehensive dataset specifically curated for this purpose. The dataset is sourced from the publicly available Drone Object Detection Dataset on Roboflow and contains annotated images captured in diverse environmental conditions and camera perspectives.
+
+This dataset is designed to enable robust detection and classification of drones and other common flying objects.
 https://universe.roboflow.com/project-ddrone/datasetdrone-trv98
+
+Dataset Features:
+
+a. Classes: Drones, Helicopters, Birds, and Airplanes
+
+b. Annotations: Includes bounding boxes and labels in YOLO format
+
+c. Diverse Conditions: Images taken under various environmental conditions and from different camera angles
+
+
 
 # Install required packages
 ```
