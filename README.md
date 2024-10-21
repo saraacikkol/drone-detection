@@ -65,3 +65,7 @@ dataset = version.download("yolov8-obb")
 
 # Evaluate the model
 
+```
+%cd {HOME}
+!yolo task=detect mode=val model={model.location} data={dataset.location}/data.yaml
+```
