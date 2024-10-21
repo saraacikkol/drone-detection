@@ -1,4 +1,4 @@
-# Drone Object Detection Research
+# Drone Object Detection using YOLOv8
 This README file outlines the steps and details for training a YOLOv8 model on Colab using a drone detection dataset sourced from Roboflow.
 
 # Drone Detection Dataset
