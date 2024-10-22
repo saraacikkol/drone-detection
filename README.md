@@ -55,12 +55,12 @@ from roboflow import Roboflow
 rf = Roboflow(api_key="your_api_key")
 project = rf.workspace("workspace_name").project("project_name")
 version = project.version(version_number)
-dataset = version.download("yolov8-obb")
+dataset = version.download("yolov8")
 ```
 # Train the model
 ```
 %cd {HOME}
-!yolo task=detect mode=train model=yolov8s.pt data={dataset.location}/data.yaml epochs=25 imgsz=640
+!yolo task=detect mode=train model=yolov8n.pt data={dataset.location}/data.yaml epochs=25 imgsz=640
 ```
 
 # Evaluate the model
