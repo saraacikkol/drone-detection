@@ -35,7 +35,7 @@ import os
 HOME = os.getcwd()
 print(HOME)
 ```
-# Install yolov8 using pip (recommended)
+# Install YoLov8 using pip (recommended)
 ```
 !pip install ultralytics==8.2.103 -q
 
@@ -68,4 +68,16 @@ dataset = version.download("yolov8")
 ```
 %cd {HOME}
 !yolo task=detect mode=val model={model.location} data={dataset.location}/data.yaml
+```
+
+# Visualize the confusion matrix
+```
+%cd {HOME}
+Image(filename=f'{HOME}/runs/detect/train/results.png', width=600)
+```
+
+# Display the results of your model's performance
+```
+%cd {HOME}
+Image(filename=f'{HOME}/runs/detect/train/results.png', width=600)
 ```
