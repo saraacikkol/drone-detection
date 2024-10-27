@@ -30,7 +30,8 @@ c. Diverse Conditions: Images taken under various environmental conditions and f
 ```
 
 # Print current working directory
-```import os
+```
+import os
 HOME = os.getcwd()
 print(HOME)
 ```
@@ -50,8 +51,8 @@ from IPython.display import display, Image
 ```
 %cd {HOME}
 !pip install roboflow
-from roboflow import Roboflow
 
+from roboflow import Roboflow
 rf = Roboflow(api_key="your_api_key")
 project = rf.workspace("workspace_name").project("project_name")
 version = project.version(version_number)
@@ -59,7 +60,7 @@ dataset = version.download("yolov8")
 ```
 # Train the model
 ```
-!yolo task=detect mode=train model=yolov8n.pt data=/content/datasetDrone-1/data.yaml epochs=5 imgsz=192
+!yolo task=detect mode=train model=yolov8n.pt data=/content/project_name/data.yaml epochs=5
 ```
 
 # Evaluate the model
