@@ -1,5 +1,5 @@
-# Drone Object Detection using YOLOv8
-This README file outlines the steps and details for training a YOLOv8 model on Colab using a drone detection dataset sourced from Roboflow.
+# Drone Object Detection using YOLOv5
+This README file outlines the steps and details for training a YOLOv5 model on Colab using a drone detection dataset sourced from Roboflow.
 
 # Drone Detection Dataset
 
@@ -35,17 +35,22 @@ import os
 HOME = os.getcwd()
 print(HOME)
 ```
-# Install YoLov8 using pip (recommended)
+# Install YoLov5
 ```
-!pip install ultralytics==8.2.103 -q
-
-from IPython import display
-display.clear_output()
-import ultralytics
-ultralytics.checks()
-
-from ultralytics import YOLO
-from IPython.display import display, Image
+%cd yolov5
+%pip install -r requirements.txt comet_ml
+!pip install -e .
+```
+# Add the current directory to the Python path.
+```
+import sys
+sys.path.append('.')
+```
+# Import torch and the yolov5 utility functions
+```
+import torch
+from yolov5 import utils
+display = utils.notebook_init()  # checks
 ```
 # Download the dataset
 ```
@@ -56,11 +61,11 @@ from roboflow import Roboflow
 rf = Roboflow(api_key="your_api_key")
 project = rf.workspace("workspace_name").project("project_name")
 version = project.version(version_number)
-dataset = version.download("yolov8")
+dataset = version.download("yolov5")
 ```
 # Train the model
 ```
-!yolo task=detect mode=train model=yolov8n.pt data=/content/project_name/data.yaml epochs=5
+!python train.py --img 384 --epochs 10 --data {dataset.location}/data.yaml --weights yolov5m.pt
 ```
 
 # Evaluate the model
