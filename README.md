@@ -27,6 +27,7 @@ c. Diverse Conditions: Images taken under various environmental conditions and f
 ```
 # Install YoLov5
 ```
+!git clone https://github.com/ultralytics/yolov5
 %cd yolov5
 %pip install -r requirements.txt comet_ml
 !pip install -e .
