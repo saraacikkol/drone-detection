@@ -16,24 +16,14 @@ b. Annotations: Includes bounding boxes and labels in YOLO format
 
 c. Diverse Conditions: Images taken under various environmental conditions and from different camera angles
 
-
-
 # Install required packages
 ```
 !pip install ultralytics
 !pip install roboflow
 ```
-
 # Access to GPU
 ```
 !nvidia-smi
-```
-
-# Print current working directory
-```
-import os
-HOME = os.getcwd()
-print(HOME)
 ```
 # Install YoLov5
 ```
